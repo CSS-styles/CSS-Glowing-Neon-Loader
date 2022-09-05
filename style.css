@@ -1,0 +1,98 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #181a1b;
+}
+.text {
+  color: white;
+  font-size: 25px;
+  font-family: sans-serif;
+  font-weight: 600;
+  text-shadow: 1px 1px 5px black;
+  letter-spacing: 1px;
+  cursor: default;
+}
+.loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 150px;
+  width: 300px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border: 2px solid gray;
+  box-shadow: 1px 1px 20px black;
+  border-radius: 10px;
+}
+.circles {
+  position: relative;
+  height: 100px;
+  width: 100px;
+}
+.circles span {
+  position: absolute;
+  display: inline-block;
+  height: 50px;
+  width: 50px;
+  background-color: transparent;
+  border: 1px solid white;
+  border-radius: 50%;
+  animation: loader 2s ease infinite;
+}
+.circle {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.circle1 {
+  top: 0;
+  left: 0;
+}
+.circle2 {
+  top: 0;
+  right: 0;
+}
+.circle3 {
+  bottom: 0;
+  left: 0;
+}
+.circle4 {
+  bottom: 0;
+  right: 0;
+}
+@keyframes loader {
+  0% {
+    border: 1px solid aqua;
+    box-shadow: 1px 1px 10px aqua;
+    filter: drop-shadow(1px 1px 10px aqua);
+    height: 50px;
+    width: 50px;
+  }
+  25% {
+    border: 1px solid rgb(241, 33, 68);
+    box-shadow: 1px 1px 10px rgb(241, 33, 68);
+    filter: drop-shadow(1px 1px 10px rgb(241, 33, 68));
+    height: 25px;
+    width: 25px;
+  }
+  50% {
+    border: 1px solid royalblue;
+    box-shadow: 1px 1px 10px royalblue;
+    filter: drop-shadow(1px 1px 10px royalblue);
+    height: 100px;
+    width: 100px;
+  }
+  75% {
+    border: 1px solid lime;
+    box-shadow: 1px 1px 10px lime;
+    filter: drop-shadow(1px 1px 10px lime);
+  }
+  100% {
+    border: 1px solid yellow;
+    box-shadow: 1px 1px 10px yellow;
+    filter: drop-shadow(1px 1px 10px yellow);
+  }
+}
